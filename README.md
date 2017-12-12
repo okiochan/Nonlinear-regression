@@ -14,7 +14,7 @@
 Можно мин-ть градиентным спуском. Но есть град. спуск с гессианом  ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/CodeCogsEqn(1).gif)
 (сходится с квадратичной скоростью, но функция должна быть выпукла)
 
-Запустим алгоритм на нашей выборке
-оранжевый - результат нелинейной регрессии
+Запустим алгоритм на нашей выборке;
+**оранжевый - результат нелинейной регрессии
 
 ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/2.png)
