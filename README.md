@@ -8,7 +8,7 @@
 
 Модель для выборки подбирает эксперт. Данная выборка похожа на синус
 
-Запишем МНК \n
+Запишем МНК
 ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/CodeCogsEqn.gif)
 
 Можно мин-ть градиентным спуском. Но есть град. спуск с гессианом  ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/CodeCogsEqn(1).gif)
