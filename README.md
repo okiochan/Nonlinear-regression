@@ -18,3 +18,5 @@
 **оранжевый - результат нелинейной регрессии**
 
 ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/2.png)
+
+код программы [здесь]( https://github.com/okiochan/Nonlinear-regression/blob/master/non-linear.py)
