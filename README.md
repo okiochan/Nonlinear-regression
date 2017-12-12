@@ -14,6 +14,6 @@
 Можно мин-ть градиентным спуском. Но есть град. спуск с гессианом  ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/CodeCogsEqn(1).gif)
 (сходится с квадратичной скоростью, но функция должна быть выпукла)
 
-Запустим алгоритм на данной выборке
+Запустим алгоритм на нашей выборке
 
-//2
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/2.png)
