@@ -9,5 +9,5 @@
 Запишем МНК
 ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/CodeCogsEqn.gif)
 
-можно мин-ть градиентным спуском. Но есть град. спуск с гессианом  ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/CodeCogsEqn(1).gif)
+Можно мин-ть градиентным спуском. Но есть град. спуск с гессианом  ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/CodeCogsEqn(1).gif)
 (сходится с квадратичной скоростью, но функция должна быть выпукла)
