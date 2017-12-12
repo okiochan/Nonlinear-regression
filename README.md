@@ -2,6 +2,8 @@
 
 Для выборки вида:
 
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/1.png)
+
 линейная регрессия не подходит
 
 Модель для выборки подбирает эксперт. Данная выборка похожа на синус
