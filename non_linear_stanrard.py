@@ -35,15 +35,15 @@ def Error(p,X,Y):
         err += Quadratic(p,X[i],Y[i])
     return err
 
-#(F(x+h) - F(x))/h
-def dfNumeric(p,x,y):
-    G = np.zeros(4)
-    EPS = 1e-5
-    for i in range(4):
-        xp = p.copy()
-        xp[i]+=EPS
-        G[i] = (Quadratic(xp,x,y)- Quadratic(p,x,y))/EPS
-    return G
+# #(F(x+h) - F(x))/h
+# def dfNumeric(p,x,y):
+    # G = np.zeros(4)
+    # EPS = 1e-5
+    # for i in range(4):
+        # xp = p.copy()
+        # xp[i]+=EPS
+        # G[i] = (Quadratic(xp,x,y)- Quadratic(p,x,y))/EPS
+    # return G
 
 def GradDescent(X,Y, Max,etta):
     n = X.shape[0]
@@ -60,11 +60,6 @@ def GradDescent(X,Y, Max,etta):
 
 
 x, y = GetData(0.3)
-
-# p = np.random.randn(4)
-# print( dF(p,x[0],y[0]))
-# print( dfNumeric(p,x[0],y[0]))
-# quit()
 
 Y1 = np.zeros(y.size)
 Xh = GradDescent(x,y,2000,0.002)
