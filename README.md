@@ -21,3 +21,12 @@
 
 
 код программы [здесь]( https://github.com/okiochan/Nonlinear-regression/blob/master/non_linear_stanrard.py)
+
+Также я попробовала ускорить сходимость градиентного спуска при помощи матрицы Hessian.
+
+Запишем наш синус так:
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/CodeCogsEqn.gif)
+
+Посчитаем матрицу Гессе вторых производных сначала в общем виде:
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/CodeCogsEqn (1).gif)
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/CodeCogsEqn (2).gif)
