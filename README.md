@@ -25,8 +25,10 @@
 Также я попробовала ускорить сходимость градиентного спуска при помощи матрицы Hessian.
 
 Запишем наш синус так:
-![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/CodeCogsEqn.gif)
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/h1.gif)
 
 Посчитаем матрицу Гессе вторых производных сначала в общем виде:
-![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/CodeCogsEqn (1).gif)
-![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/CodeCogsEqn (2).gif)
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/h2.gif)
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/h3.gif)
+
+Эту часть ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/h3.gif) вычислим в математике
