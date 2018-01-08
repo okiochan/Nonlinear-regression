@@ -73,4 +73,6 @@ def Hess(p,x,y):
     
 ```
 
-код программы [здесь]( https://github.com/okiochan/Nonlinear-regression/blob/master/non_linear_hessian.py)
+код программы в **non_linear_hessian.py**
+
+С применением метода Ньютона — Рафсона, функция сходится в разы быстрее, при этом квадратичная ошибка не ухудшается.
