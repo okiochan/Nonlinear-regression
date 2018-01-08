@@ -2,37 +2,45 @@
 
 Для выборки вида:
 
-![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/1.png)
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/img/1.png)
 
 **линейная регрессия не подходит**
 
 Модель для выборки подбирает эксперт. Данная выборка похожа на синус
 
 Запишем МНК
-![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/mnk.gif)
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/formula/mnk.gif)
 
 Запустим алгоритм на нашей выборке; Минимизировала градиентным спуском.
 
-![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/2.png)
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/img/2.png)
+
+код программы **non_linear_stanrard.py**
 
 
-код программы [здесь]( https://github.com/okiochan/Nonlinear-regression/blob/master/non_linear_stanrard.py)
+Можно мин-ть градиентным спуском. Но есть метод Ньютона, алгоритм Ньютона (также известный как метод касательных) — это итерационный численный метод нахождения корня (нуля) заданной функции. 
+Метод описан ![здесь]( https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD%D0%B0)
+Применим его для поиска экстремума нашей функции. 
 
-Можно мин-ть градиентным спуском. Но есть град. спуск с гессианом  ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/CodeCogsEqn(1).gif)
+Пусть необходимо найти минимум функции многих переменных
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/formula/n1.gif)
+Эта задача равносильна задаче нахождения нуля градиента {\displaystyle \nabla f({\vec {x}})}
+
+Но есть град. спуск с гессианом  ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/CodeCogsEqn(1).gif)
 (сходится с квадратичной скоростью, но функция должна быть выпукла)
 
 Для нахождения матрицы Гессе, запишем нашу функцию так:
-![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/h1.gif)
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/formula/h1.gif)
 
 Посчитаем матрицу Гессе вторых производных сначала в общем виде:
 по первой производной
-![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/h2.gif)
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/formula/h2.gif)
 по второй производной
-![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/h3.gif)
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/formula/h3.gif)
 
-Эту часть ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/h4.gif) вычислим в математике
+Эту часть ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/formula/h4.gif) вычислим в математике
 
-![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/h5.png)
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/formula/h5.png)
 
 Реализуем Hessian на python
 
