@@ -18,16 +18,22 @@
 код программы **non_linear_stanrard.py**
 
 
-Можно мин-ть градиентным спуском. Но есть метод Ньютона, алгоритм Ньютона (также известный как метод касательных) — это итерационный численный метод нахождения корня (нуля) заданной функции. 
+Можно мин-ть градиентным спуском. Но есть **метод Ньютона**, алгоритм Ньютона (также известный как метод касательных) — это итерационный численный метод нахождения корня (нуля) заданной функции. 
 Метод описан ![здесь]( https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4_%D0%9D%D1%8C%D1%8E%D1%82%D0%BE%D0%BD%D0%B0)
 Применим его для поиска экстремума нашей функции. 
 
 Пусть необходимо найти минимум функции многих переменных
 ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/formula/n1.gif)
-Эта задача равносильна задаче нахождения нуля градиента {\displaystyle \nabla f({\vec {x}})}
+Эта задача равносильна задаче нахождения нуля градиента 
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/formula/n2.gif)
+Применим метод Ньютона, и запишем в удобном итеративном виде (Н - гессиан, матрица Гёссе):
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/formula/n3.gif)
+Следует отметить, что в случае квадратичной функции метод Ньютона находит экстремум за одну итерацию.
+Сходится с квадратичной скоростью, но функция должна быть выпукла.
 
-Но есть град. спуск с гессианом  ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/CodeCogsEqn(1).gif)
-(сходится с квадратичной скоростью, но функция должна быть выпукла)
+**Метод Ньютона — Рафсона** является улучшением метода Ньютона нахождения экстремума, описанного выше. Основное отличие заключается в том, что на очередной итерации каким-либо из методов одномерной оптимизации выбирается оптимальный шаг:
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/formula/n4.gif)
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/formula/n5.gif)
 
 Для нахождения матрицы Гессе, запишем нашу функцию так:
 ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/formula/h1.gif)
