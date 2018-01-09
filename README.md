@@ -107,3 +107,10 @@ Golden(f, l, r, EPS=1e-9, maxiter=100)
 
 
 С применением метода Ньютона — Рафсона, функция сходится в разы быстрее, при этом квадратичная ошибка не ухудшается.
+
+Можно также заметить, что стандартный метод Ньютона (без лямбы) не всегда сходится. На данном примере, при начальном x0 = (1,1,1,1)  метод не сошелся
+
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/img/n2.png)
+
+SSE
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/img/n22.png)
