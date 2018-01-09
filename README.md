@@ -11,7 +11,7 @@
 Запишем МНК
 ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/formula/mnk.gif)
 
-Запустим алгоритм на нашей выборке; Минимизировала градиентным спуском.
+Запустим алгоритм на нашей выборке; Минимизируем градиентным спуском.
 
 ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/img/2.png)
 
@@ -39,7 +39,9 @@
 
 ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/formula/n5.gif)
 
-Для нахождения матрицы Гессе, запишем нашу функцию так:
+# Реализуем метод Ньютона-Рафсона
+
+Для нахождения **матрицы Гёссе**, запишем нашу функцию так:
 ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/formula/h1.gif)
 
 Посчитаем матрицу Гессе вторых производных сначала в общем виде:
@@ -52,7 +54,7 @@
 
 ![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/formula/h5.png)
 
-Реализуем Hessian на python
+Реализуем Hessian(полученные формулы) на python
 
 ```
 def Hess(p,x,y):
@@ -70,9 +72,38 @@ def Hess(p,x,y):
         for j in range(4):
             h[i,j]=g[i]*g[j] + (u - y)*h[i,j]
     return h
+```
+
+Теперь сделаем нужный спуск, не забудем про лямбду (длину вектора)
+
+```
+    for i in range(n):
+        G += dF(x, X[i],Y[i])
+        H += Hess(x, X[i],Y[i])
+    #направление вектора
+    d = -np.linalg.pinv(H).dot(G)
     
+    def Qalpha(alpha):
+        return Error(x + alpha * d, X, Y)
+    #ищем длину вектора
+    alpha_best = Golden(Qalpha, 0, 10)
+    x = x + alpha_best * d
+```
+
+Лямбду найдем методом **золотого сечения**, в программме - Golden, принимает функцию (функционал качества), границы, эпсилон и кол-во итераций
+
+```
+Golden(f, l, r, EPS=1e-9, maxiter=100)
 ```
 
 код программы в **non_linear_hessian.py**
+
+Вот как отработают оба алгоритма: Градиентный спуск с шагом 0.002 и Метод Ньютона — Рафсона. Мы видим, что оба сошлись к одному результату. По скорости, Метод Ньютона — Рафсона гораздо быстрее.
+
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/img/n1.png)
+
+Сравним ошибки. Мы видимЮ что у Ньютона — Рафсона SSE меньше и он быстрее сходится.
+![](https://raw.githubusercontent.com/okiochan/Nonlinear-regression/master/img/n11.png)
+
 
 С применением метода Ньютона — Рафсона, функция сходится в разы быстрее, при этом квадратичная ошибка не ухудшается.
